@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import TodoForm from './TodoForm';
 import TodoItem from './TodoItem';
 import withLogger from './WithLogger';
+import Timer from './Timer';
+import PreviousState from './PreviousState';
 
 
 const TodoList = ({loading, clickbutton}) =>{
@@ -50,6 +52,9 @@ const TodoList = ({loading, clickbutton}) =>{
             <button onClick={() => clickbutton(loading)}>
                 {loading ? 'State - True' : 'State - False'}
             </button>
+
+            <Timer />
+            <PreviousState />
             
         </div>
         
